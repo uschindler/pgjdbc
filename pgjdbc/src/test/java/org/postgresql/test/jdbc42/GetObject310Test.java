@@ -93,10 +93,12 @@ public class GetObject310Test extends BaseTest4 {
     assumeTrue(TestUtil.haveIntegerDateTimes(con));
 
     List<String> zoneIdsToTest = new ArrayList<String>();
+    zoneIdsToTest.addAll(ZoneId.getAvailableZoneIds());
     zoneIdsToTest.add("Africa/Casablanca"); // It is something like GMT+0..GMT+1
     zoneIdsToTest.add("America/Adak"); // It is something like GMT-10..GMT-9
     zoneIdsToTest.add("Atlantic/Azores"); // It is something like GMT-1..GMT+0
     zoneIdsToTest.add("Europe/Berlin"); // It is something like GMT+1..GMT+2
+    zoneIdsToTest.add("Europe/Brussels"); // It is something like GMT+1..GMT+2
     zoneIdsToTest.add("Europe/Moscow"); // It is something like GMT+3..GMT+4 for 2000s
     zoneIdsToTest.add("Pacific/Apia"); // It is something like GMT+13..GMT+14
     zoneIdsToTest.add("Pacific/Niue"); // It is something like GMT-11..GMT-11
